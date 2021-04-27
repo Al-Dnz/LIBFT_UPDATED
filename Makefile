@@ -41,6 +41,7 @@ SRCS         = ft_memset.c \
               ft_strcmp.c \
               ft_str_index.c \
               ft_tabsize.c \
+              ft_free_tab.c \
 	      ft_lstnew.c \
               ft_lstadd_front.c \
               ft_lstsize.c \
@@ -67,14 +68,10 @@ all: ${NAME}
 
 clean:
 	rm -f ${OBJS}
-	@echo "\n***********************"
 	@echo "=> libft : obj cleant <="
-	@echo "***********************\n"
 
 fclean: clean
 	rm -f ${NAME}
-	@echo "\n***********************"
 	@echo "=> ${NAME} cleant <="
-	@echo "***********************\n"
 
 re: fclean all
