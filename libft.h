@@ -6,7 +6,7 @@
 /*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/11 00:07:10 by adenhez           #+#    #+#             */
-/*   Updated: 2021/04/16 18:12:31 by adenhez          ###   ########.fr       */
+/*   Updated: 2021/04/27 15:44:39 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,6 @@ int					get_next_line(int fd, char **line);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 void				ft_strclr(char **s);
 int					ft_str_index(char *str, char **tab);
+int					ft_tabsize(char **tab);
 
 #endif

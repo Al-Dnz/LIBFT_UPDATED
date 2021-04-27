@@ -40,8 +40,8 @@ SRCS         = ft_memset.c \
               get_next_line_util.c \
               ft_strcmp.c \
               ft_str_index.c \
-
-BONUS_SRCS    = ft_lstnew.c \
+              ft_tabsize.c \
+	      ft_lstnew.c \
               ft_lstadd_front.c \
               ft_lstsize.c \
               ft_lstlast.c \
@@ -52,7 +52,6 @@ BONUS_SRCS    = ft_lstnew.c \
               ft_lstmap.c \
 
 OBJS = 			${SRCS:.c=.o}
-BONUS_OBJS =	${BONUS_SRCS:.c=.o}
 
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
@@ -60,18 +59,22 @@ BONUS_OBJS =	${BONUS_SRCS:.c=.o}
 ${NAME}: ${OBJS}
 	ar rc ${NAME} ${OBJS}
 	ranlib ${NAME}
+	@echo "\n***********************"
+	@echo "=> ${NAME} created !<="
+	@echo "***********************\n"
 
-all: ${NAME} bonus
-
-bonus: ${BONUS_OBJS}
-	ar rc ${NAME} ${BONUS_OBJS}
-	ranlib ${NAME}
+all: ${NAME}
 
 clean:
 	rm -f ${OBJS}
-	rm -f ${BONUS_OBJS}
+	@echo "\n***********************"
+	@echo "=> obj cleant <="
+	@echo "***********************\n"
 
 fclean: clean
 	rm -f ${NAME}
+	@echo "\n***********************"
+	@echo "=> ${NAME} cleant <="
+	@echo "***********************\n"
 
 re: fclean all
