@@ -43,6 +43,7 @@ SRCS         = ft_memset.c \
               ft_tabsize.c \
               ft_free_tab.c \
               ft_is_sort.c \
+              ft_is_supequal.c \
 	      ft_lstnew.c \
               ft_lstadd_front.c \
               ft_lstsize.c \
