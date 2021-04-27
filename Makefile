@@ -1,6 +1,6 @@
-CC           = gcc
+CC           = clang
 HEADER		 = libft.h
-CFLAGS       = -Wall -Wextra -Werror
+CFLAGS       = -g3 -Wall -Wextra -Werror
 NAME         = libft.a
 SRCS         = ft_memset.c \
               ft_bzero.c \
@@ -68,7 +68,7 @@ all: ${NAME}
 clean:
 	rm -f ${OBJS}
 	@echo "\n***********************"
-	@echo "=> obj cleant <="
+	@echo "=> libft : obj cleant <="
 	@echo "***********************\n"
 
 fclean: clean
