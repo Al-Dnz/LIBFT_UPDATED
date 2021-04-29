@@ -6,7 +6,7 @@
 /*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/11 00:07:10 by adenhez           #+#    #+#             */
-/*   Updated: 2021/04/29 19:05:31 by adenhez          ###   ########.fr       */
+/*   Updated: 2021/04/29 22:37:25 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ int					get_next_line(int fd, char **line);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 void				ft_strclr(char **s);
 int					ft_str_index(char *str, char **tab);
+int					ft_find_str_index(char *str, char **tab);
 int					ft_tabsize(char **tab);
 void				free_tab(char **tab);
 int					ft_is_sort(int *tab, int length, int (*f)(int, int));

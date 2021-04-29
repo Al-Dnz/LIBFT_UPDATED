@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_index.c                                    :+:      :+:    :+:   */
+/*   ft_find_str_index.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/29 18:59:42 by adenhez           #+#    #+#             */
-/*   Updated: 2021/04/29 19:55:58 by adenhez          ###   ########.fr       */
+/*   Created: 2021/04/29 22:37:59 by adenhez           #+#    #+#             */
+/*   Updated: 2021/04/29 22:38:05 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_find_index(char *str, char c)
+int	ft_find_str_index(char *str, char **tab)
 {
 	int	i;
 
 	i = 0;
-	if (str == NULL)
-		return (-1);
-	while (str[i])
+	while (tab[i])
 	{
-		if (str[i] == c)
+		if (ft_strcmp(tab[i], str))
 			return (i);
 		i++;
 	}
