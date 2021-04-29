@@ -6,7 +6,7 @@
 /*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/11 00:07:10 by adenhez           #+#    #+#             */
-/*   Updated: 2021/04/29 16:59:40 by adenhez          ###   ########.fr       */
+/*   Updated: 2021/04/29 19:05:31 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,5 +92,7 @@ int					ft_tabsize(char **tab);
 void				free_tab(char **tab);
 int					ft_is_sort(int *tab, int length, int (*f)(int, int));
 int					ft_is_supequal(int a, int b);
+int					ft_find_index(char *str, char c);
+int					ft_strchart(char *str, char *chart);
 
 #endif
