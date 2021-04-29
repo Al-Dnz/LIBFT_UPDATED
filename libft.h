@@ -6,7 +6,7 @@
 /*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/11 00:07:10 by adenhez           #+#    #+#             */
-/*   Updated: 2021/04/27 22:47:55 by adenhez          ###   ########.fr       */
+/*   Updated: 2021/04/29 16:59:40 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,9 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
+void				ft_del(void *ad);
+void				*ft_lstpop(t_list **head_ref);
+void				*ft_lstshift(t_list *head);
 
 int					get_next_line(int fd, char **line);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
@@ -89,6 +92,5 @@ int					ft_tabsize(char **tab);
 void				free_tab(char **tab);
 int					ft_is_sort(int *tab, int length, int (*f)(int, int));
 int					ft_is_supequal(int a, int b);
-
 
 #endif
