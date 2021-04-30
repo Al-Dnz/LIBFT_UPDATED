@@ -46,7 +46,6 @@ SRCS         = ft_memset.c \
               ft_is_supequal.c \
               ft_strchart.c \
               ft_find_index.c \
-              ft_find_str_index.c \
             ft_lstnew.c \
               ft_lstadd_front.c \
               ft_lstsize.c \
