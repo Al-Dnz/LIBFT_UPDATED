@@ -6,13 +6,13 @@
 /*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 19:43:36 by adenhez           #+#    #+#             */
-/*   Updated: 2021/04/27 19:47:05 by adenhez          ###   ########.fr       */
+/*   Updated: 2021/04/30 13:13:50 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	free_tab(char **tab)
+void	ft_free_tab(char **tab)
 {
 	int	i;
 
