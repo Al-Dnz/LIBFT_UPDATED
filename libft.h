@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
+/*   By: alexdnz <alexdnz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/11 00:07:10 by adenhez           #+#    #+#             */
-/*   Updated: 2021/04/30 13:26:34 by adenhez          ###   ########.fr       */
+/*   Updated: 2021/05/01 17:31:03 by alexdnz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,8 @@ char				*ft_strnstr(const char *haystack,
 						const char *needle, size_t len);
 long				ft_atoi(const char *str);
 long				ft_atoi_special(const char *str);
-
+int					ft_atoi_checker(const char *str);
+long long			ft_atolong(const char *str);
 int					ft_isspace(char c);
 char				*ft_strcapitalize(char *str);
 char				*ft_strupcase(char *str);
