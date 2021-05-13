@@ -70,7 +70,7 @@ ${NAME}: ${OBJS}
 	ranlib ${NAME}
 	@echo "\n***********************"
 	@echo "=> ${NAME} created !<="
-	@echo "***********************\n"
+	@echo "***********************"
 
 all: ${NAME}
 
