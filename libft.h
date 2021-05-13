@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alexdnz <alexdnz@student.42.fr>            +#+  +:+       +#+        */
+/*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/11 00:07:10 by adenhez           #+#    #+#             */
-/*   Updated: 2021/05/01 17:31:03 by alexdnz          ###   ########.fr       */
+/*   Updated: 2021/05/13 16:43:16 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,7 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 void				ft_del(void *ad);
 void				*ft_lstpop(t_list **head_ref);
 void				*ft_lstshift(t_list *head);
+void				ft_lstrev(t_list **head_ref);
 
 int					get_next_line(int fd, char **line);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
