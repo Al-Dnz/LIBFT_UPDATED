@@ -6,13 +6,13 @@
 /*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 17:57:12 by adenhez           #+#    #+#             */
-/*   Updated: 2021/04/13 17:59:20 by adenhez          ###   ########.fr       */
+/*   Updated: 2021/05/05 18:57:48 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	process(char **str, char **line)
+int	gnl_process(char **str, char **line)
 {
 	char	*temp;
 	char	*ptr;
@@ -53,7 +53,7 @@ int	output(int byte, char **str, char **line)
 	}
 	else
 	{
-		if (process(&(*str), line) == -1)
+		if (gnl_process(&(*str), line) == -1)
 			return (-1);
 		if (*str == NULL)
 			return (0);
