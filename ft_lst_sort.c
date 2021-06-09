@@ -6,7 +6,7 @@
 /*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/09 15:20:56 by adenhez           #+#    #+#             */
-/*   Updated: 2021/06/09 15:38:13 by adenhez          ###   ########.fr       */
+/*   Updated: 2021/06/09 16:16:39 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	ft_lst_sort(t_list **head_ref)
 	if ((head == NULL) || (head->next == NULL))
 		return ;
 	front_backsplit(head, &a, &b);
-	list_merge_sort(&a);
-	list_merge_sort(&b);
+	ft_lst_sort(&a);
+	ft_lst_sort(&b);
 	*head_ref = sorted_merge(a, b);
 }
