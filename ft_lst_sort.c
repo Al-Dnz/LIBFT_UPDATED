@@ -6,13 +6,13 @@
 /*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/09 15:20:56 by adenhez           #+#    #+#             */
-/*   Updated: 2021/06/09 15:22:29 by adenhez          ###   ########.fr       */
+/*   Updated: 2021/06/09 15:37:26 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*sorted_merge(t_list *a, t_list *b)
+static t_list	*sorted_merge(t_list *a, t_list *b)
 {
 	t_list	*result;
 
@@ -34,7 +34,7 @@ t_list	*sorted_merge(t_list *a, t_list *b)
 	return (result);
 }
 
-void	front_backsplit(t_list *source, t_list **front_ref, t_list **back_ref)
+static void	front_backsplit(t_list *source, t_list **front_ref, t_list **back_ref)
 {
 	t_list	*fast;
 	t_list	*slow;

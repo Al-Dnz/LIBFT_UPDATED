@@ -6,7 +6,7 @@
 /*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/11 00:07:10 by adenhez           #+#    #+#             */
-/*   Updated: 2021/06/09 15:23:53 by adenhez          ###   ########.fr       */
+/*   Updated: 2021/06/09 15:27:47 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 
-typedef struct s_list
+typedef struct		s_list
 {
 	void			*content;
 	struct s_list	*next;
@@ -85,7 +85,6 @@ void				ft_del(void *ad);
 void				*ft_lstpop(t_list **head_ref);
 void				*ft_lstshift(t_list **head);
 void				ft_lstrev(t_list **head_ref);
-void				ft_lst_sort(t_list **head_ref);
 
 int					get_next_line(int fd, char **line);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
