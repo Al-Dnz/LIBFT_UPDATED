@@ -59,6 +59,7 @@ SRCS         = ft_memset.c \
               ft_del.c \
               ft_lstshift.c \
               ft_lstrev.c \
+			  ft_lst_sort.c 
 
 OBJS = 			${SRCS:.c=.o}
 
