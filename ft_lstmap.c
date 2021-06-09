@@ -6,7 +6,7 @@
 /*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 22:28:45 by adenhez           #+#    #+#             */
-/*   Updated: 2020/11/19 20:53:29 by adenhez          ###   ########.fr       */
+/*   Updated: 2021/06/09 12:57:03 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	lst = lst->next;
 	while (lst)
 	{
-		if (!(temp = ft_lstnew(f(lst->content))))
+		temp = ft_lstnew(f(lst->content));
+		if (temp == NULL)
 			ft_lstclear(&temp, del);
 		ft_lstadd_back(&li, temp);
 		lst = lst->next;

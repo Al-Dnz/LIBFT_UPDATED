@@ -6,7 +6,7 @@
 /*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 23:07:44 by adenhez           #+#    #+#             */
-/*   Updated: 2020/11/24 12:28:30 by adenhez          ###   ########.fr       */
+/*   Updated: 2021/06/09 12:59:43 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t needlelen;
-	size_t haylen;
-	size_t index;
+	size_t	needlelen;
+	size_t	haylen;
+	size_t	index;
 
 	needlelen = ft_strlen(needle);
 	haylen = ft_strlen(haystack);

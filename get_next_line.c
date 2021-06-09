@@ -6,11 +6,13 @@
 /*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 17:57:12 by adenhez           #+#    #+#             */
-/*   Updated: 2021/05/05 18:57:48 by adenhez          ###   ########.fr       */
+/*   Updated: 2021/06/09 13:28:28 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	g_byte;
 
 int	gnl_process(char **str, char **line)
 {
@@ -33,7 +35,8 @@ int	gnl_process(char **str, char **line)
 	}
 	else
 	{
-		if ((*line = ft_strdup(*str)) == NULL)
+		*line = ft_strdup(*str);
+		if (*line == NULL)
 			return (-1);
 		ft_strclr(str);
 	}
@@ -63,16 +66,16 @@ int	output(int byte, char **str, char **line)
 
 int	get_next_line(int fd, char **line)
 {
-	int			byte;
 	static char	*str;
 	char		*temp;
 	char		buf[BUFFER_SIZE + 1];
 
 	if (fd < 0 || line == NULL || BUFFER_SIZE <= 0)
 		return (-1);
-	while ((byte = read(fd, buf, BUFFER_SIZE)) > 0)
+	g_byte = read(fd, buf, BUFFER_SIZE);
+	while (g_byte > 0)
 	{
-		buf[byte] = 0;
+		buf[g_byte] = 0;
 		if (str == NULL)
 			str = ft_strdup(buf);
 		else
@@ -85,7 +88,7 @@ int	get_next_line(int fd, char **line)
 		if (ft_strchr(str, '\n'))
 			break ;
 	}
-	if (byte < 0)
+	if (g_byte < 0)
 		return (-1);
-	return (output(byte, &str, line));
+	return (output(g_byte, &str, line));
 }

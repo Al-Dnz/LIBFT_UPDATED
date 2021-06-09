@@ -6,7 +6,7 @@
 /*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 23:04:58 by adenhez           #+#    #+#             */
-/*   Updated: 2020/11/10 23:05:01 by adenhez          ###   ########.fr       */
+/*   Updated: 2021/06/09 12:57:47 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strchr(const char *s, int c)
 {
 	char	*str;
 
-	str = (char*)s;
+	str = (char *)s;
 	while (*str)
 	{
 		if (*str == (char)c)

@@ -6,13 +6,13 @@
 /*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 22:45:05 by adenhez           #+#    #+#             */
-/*   Updated: 2021/04/13 18:00:35 by adenhez          ###   ########.fr       */
+/*   Updated: 2021/06/09 12:55:58 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		char_is_separator(char c, char *charset)
+int	char_is_separator(char c, char *charset)
 {
 	int	i;
 
@@ -28,7 +28,7 @@ int		char_is_separator(char c, char *charset)
 	return (0);
 }
 
-int		count_words(char *str, char *charset)
+int	count_words(char *str, char *charset)
 {
 	int	i;
 	int	words;
@@ -75,7 +75,7 @@ void	write_split(char **split, char *str, char *charset)
 			j = 0;
 			while (char_is_separator(str[i + j], charset) == 0)
 				j++;
-			split[word] = (char*)malloc(sizeof(char) * (j + 1));
+			split[word] = (char *)malloc(sizeof(char) * (j + 1));
 			write_word(split[word], str + i, charset);
 			i += j;
 			word++;
@@ -89,7 +89,7 @@ char	**ft_split(char *str, char *charset)
 	int		words;
 
 	words = count_words(str, charset);
-	split = (char**)malloc(sizeof(char*) * (words + 1));
+	split = (char **)malloc(sizeof(char *) * (words + 1));
 	split[words] = 0;
 	write_split(split, str, charset);
 	return (split);

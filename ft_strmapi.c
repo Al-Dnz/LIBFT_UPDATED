@@ -6,7 +6,7 @@
 /*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 23:06:27 by adenhez           #+#    #+#             */
-/*   Updated: 2020/11/10 23:06:31 by adenhez          ###   ########.fr       */
+/*   Updated: 2021/06/09 11:50:22 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (s == NULL)
 		return (NULL);
 	if (f == NULL)
-		return ((char*)s);
+		return ((char *)s);
 	while (s[i])
 		i++;
 	str = malloc(sizeof(char) * (i + 1));

@@ -6,7 +6,7 @@
 /*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 22:39:58 by adenhez           #+#    #+#             */
-/*   Updated: 2020/11/10 22:40:00 by adenhez          ###   ########.fr       */
+/*   Updated: 2021/06/09 12:43:46 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,19 +27,27 @@ static int	size_predict(long n)
 	return (size);
 }
 
-char		*ft_itoa(int number)
+static long	turn_positive(long n)
+{
+	if (n < 0)
+		return (-1 * n);
+	else
+		return (n);
+}
+
+char	*ft_itoa(int number)
 {
 	char		*str;
-	int			negative;
 	int			i;
 	long		n;
 
 	n = (long)number;
-	negative = n < 0 ? 1 : 0;
-	n = n < 0 ? n * -1 : n;
-	if (!(str = malloc(sizeof(char) * (size_predict(n) + 1 + negative))))
+	number = n < 0;
+	n = turn_positive(n);
+	str = malloc(sizeof(char) * (size_predict(n) + 1 + number));
+	if (str == NULL)
 		return (NULL);
-	i = size_predict(n) + negative;
+	i = size_predict(n) + number;
 	str[i--] = '\0';
 	if (n == 0)
 	{
@@ -51,7 +59,7 @@ char		*ft_itoa(int number)
 		str[i--] = n % 10 + '0';
 		n /= 10;
 	}
-	if (negative)
+	if (number)
 		str[i] = '-';
 	return (str);
 }

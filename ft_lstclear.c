@@ -6,7 +6,7 @@
 /*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 22:41:21 by adenhez           #+#    #+#             */
-/*   Updated: 2020/11/10 22:41:24 by adenhez          ###   ########.fr       */
+/*   Updated: 2021/06/09 13:02:16 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,10 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 
 	if (*lst == NULL)
 		return ;
-	li = (*lst)->next != NULL ? (*lst)->next : NULL;
+	if ((*lst)->next != NULL)
+		li = (*lst)->next;
+	else
+		li = NULL;
 	del((*lst)->content);
 	free(*lst);
 	*lst = li;
