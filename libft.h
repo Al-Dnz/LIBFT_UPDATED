@@ -6,7 +6,7 @@
 /*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/11 00:07:10 by adenhez           #+#    #+#             */
-/*   Updated: 2021/06/09 15:39:51 by adenhez          ###   ########.fr       */
+/*   Updated: 2021/07/26 10:31:10 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,8 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
+int					ft_min(int a, int b);
+int					ft_max(int a, int b);
 
 typedef struct s_list
 {
