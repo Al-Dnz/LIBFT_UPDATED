@@ -48,7 +48,7 @@ SRCS         = ft_memset.c \
               ft_find_index.c \
               ft_min.c \
               ft_max.c \
-            ft_lstnew.c \
+			  ft_lstnew.c \
               ft_lstadd_front.c \
               ft_lstsize.c \
               ft_lstlast.c \
@@ -61,9 +61,15 @@ SRCS         = ft_memset.c \
               ft_del.c \
               ft_lstshift.c \
               ft_lstrev.c \
-			  ft_lst_sort.c 
+			  ft_lst_sort.c \
+			  ft_matrix.c \
+			  ft_strequ.c \
+			  ft_print_tab.c
 
 OBJS = 			${SRCS:.c=.o}
+
+all:
+	@$(MAKE) -s $(NAME)
 
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
@@ -71,18 +77,14 @@ OBJS = 			${SRCS:.c=.o}
 ${NAME}: ${OBJS}
 	ar rc ${NAME} ${OBJS}
 	ranlib ${NAME}
-	@echo "\n***********************"
-	@echo "=> ${NAME} created !<="
-	@echo "***********************"
-
-all: ${NAME}
+	@echo "\033[0;32m=> $(NAME) well created ! <=\033[0m"
 
 clean:
-	rm -f ${OBJS}
-	@echo "=> libft : obj cleant <="
+	-@rm -f ${OBJS} 2>/dev/null || true
+	@echo "\033[0;31m=> libft obj deleted <=\033[0m"
 
 fclean: clean
-	rm -f ${NAME}
-	@echo "=> ${NAME} cleant <="
+	-@rm -f ${NAME} 2>/dev/null || true
+	@echo "\033[0;31m=> $(NAME) deleted <=\033[0m"
 
 re: fclean all
